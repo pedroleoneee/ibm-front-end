@@ -1,0 +1,60 @@
+<div class="row">
+    <h3 class="center"><b>Área de Transferência</b></h3>
+</div>
+<div class="row">
+    <form name="myForm">
+        
+        <div class="col s12 m4 l4">
+            <div class="card-panel ajuste-card z-depth-4">
+                <div class="row">
+                    <h3 class="center"><b>Conta debito</b></h3>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 ">
+                        <select class="browser-default" ng-model="transfer.debitAccount">
+                            <option value="" disabled selected>Escolha o nome da conta</option>
+                            <option ng-repeat="account in accounts" value="{{account.id}}">{{account.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l4">
+            <div class="card-panel ajuste-card z-depth-4">
+                <div class="row">
+                    <h3 class="center"><b>Valor a transferir</b></h3>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 ">
+                        <input value="" id="first_name2" type="number" class="validate" ng-model="transfer.valueTransfer" name="transferValue" required>
+                        <label class="active" for="first_name2">Valor (R$)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l4">
+            <div class="card-panel ajuste-card z-depth-4">
+                <div class="row">
+                    <h3 class="center"><b>Conta crédito</b></h3>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 ">
+                        <select class="browser-default" name="" ng-model="transfer.creditAccount">
+                            <option value="" disabled selected>Escolha o nome da conta</option>
+                            <option ng-repeat="account in accounts" value="{{account.id}}">{{account.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 offset-l3 l4 offset-l4">
+            <a class="waves-effect waves-light btn botao-transfer green" ng-click="saveTransfer(transfer)" ng-disabled="myForm.transferValue.$invalid">Transferir</a>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    Materialize.updateTextFields();
+    $('select').material_select();
+});
+</script>

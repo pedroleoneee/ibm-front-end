@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Projeto IBM</title>
+    <meta charset="utf-8">
+    <meta http-equiv=X-UA-Compatible content="IE=Edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=keywords content>
+    <meta name=description content>
+    <link rel="shortcut icon" href="images/favicon.ico" media="none" onload="if(media!='all')media='all'">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-app="appIBM" ng-cloak>
+    <div ng-show="loading">
+        <div class="progress">
+            <div class="indeterminate blue"></div>
+        </div>
+    </div>
+    <header>
+        <div ng-include="'view/menu.html'"></div>
+    </header>
+        <main class="container content">
+            <div ng-hide="loading">
+                <div ng-view></div>
+            </div>
+        </main>
+    <footer class="page-footer white">
+        <div ng-include="'view/footer.html'"></div>
+    </footer>
+    <!-- FONTAWESOME-->
+    <script src="https://use.fontawesome.com/fb1f254ea2.js"></script>
+    <!-- JAVASCRIPT MATERIALIZE -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="lib/materialize.min.js"></script>
+    <!--ANGULAR LIB-->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-messages.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+    <!--APP-->
+    <script src="js/app.js"></script>
+    <!--CONTROLLER-->
+    <script src="js/controllers/transferAccountCtrl.js"></script>
+    <!--SERVICE-->
+    <script src="js/services/transferAccountAPIService.js"></script>
+    <!--CONFIG-->
+    <script src="js/config/routeConfig.js"></script>
+    <!--VALUE-->
+    <script src="js/value/configValue.js"></script>
+    <!--INTERCEPTORS-->
+    <script src="js/interceptors/timestampInterceptor.js"></script>
+    <script src="js/interceptors/errorInterceptor.js"></script>
+    <script src="js/interceptors/loadingInterceptor.js"></script>
+    <script src="js/config/interceptorsConfig.js"></script>
+</body>
+
+</html>

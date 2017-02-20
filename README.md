@@ -1,1 +1,1 @@
-# ibm-front-end
+As instruções e requisitos tecnicos estão na pasta info.

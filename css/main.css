@@ -1,0 +1,24 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+html {
+	font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+main {
+	flex: 1 0 auto;
+}
+
+
+.botao-transfer {
+    width: 100%
+}
+
+.ajuste-card {
+    height: 250px;
+}
+
+.ajuste-logo {
+    width: 80px;
+}
